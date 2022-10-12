@@ -35,23 +35,43 @@
 					Liên lạc với chúng tôi
 				</span>
 
-				<div class="wrap-input1 validate-input" data-validate = "Name is required">
-					<input class="input1" type="text" name="name" placeholder="Tên">
+				<div class="wrap-input1 validate-input" >
+					<input
+                        class="input1 @error('name') is-invalid @enderror"
+                        type="text" name="name" placeholder="Tên" value="{{ old('name') }}"
+                    >
+                    @error('name')
+                    <div class="alert alert-danger">{{ $message }}</div>
+                    @enderror
 					<span class="shadow-input1"></span>
 				</div>
 
-				<div class="wrap-input1 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
-					<input class="input1" type="text" name="email" placeholder="Đại chỉ Email">
+				<div class="wrap-input1 validate-input" >
+					<input class="input1" @error('email') is-invalid @enderror
+                        type="text" name="email" placeholder="Đại chỉ Email" value="{{ old('email') }}"
+                    >
+                    @error('email')
+                    <div class="alert alert-danger">{{ $message }}</div>
+                    @enderror
 					<span class="shadow-input1"></span>
 				</div>
 
-				<div class="wrap-input1 validate-input" data-validate = "Subject is required">
-					<input class="input1" type="text" name="subject" placeholder="Tiêu đề">
+				<div class="wrap-input1 validate-input" >
+					<input class="input1" @error('subject') is-invalid @enderror
+                        type="text" name="subject" placeholder="Tiêu đề" value="{{ old('subject') }}"
+                    >
+                    @error('subject')
+                    <div class="alert alert-danger">{{ $message }}</div>
+                    @enderror
 					<span class="shadow-input1"></span>
 				</div>
 
-				<div class="wrap-input1 validate-input" data-validate = "Content is required">
-					<textarea class="input1" type="text" name="content" placeholder="Nội dung"></textarea>
+				<div class="wrap-input1 validate-input" >
+					<textarea class="input1" @error('content') is-invalid @enderror
+                        type="text" name="content" placeholder="Nội dung" >{{ old('content') }}</textarea>
+                    @error('content')
+                    <div class="alert alert-danger">{{ $message }}</div>
+                    @enderror
 					<span class="shadow-input1"></span>
 				</div>
 
