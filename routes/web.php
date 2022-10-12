@@ -13,6 +13,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'App\Http\Controllers\HomeController@index')->name('index') ;
+
+Route::post('/send', 'App\Http\Controllers\MailController@sendMail')->name('send') ;
