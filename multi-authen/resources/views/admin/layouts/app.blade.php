@@ -15,10 +15,17 @@
 
         <!-- Scripts -->
         <script src="{{ asset('js/app.js') }}" defer></script>
+
+        <!-- Scripts -->
+        <link rel="preload" as="style" href="http://localhost:8000/build/assets/app.badde8dd.css" />
+        <link rel="modulepreload" href="http://localhost:8000/build/assets/app.d426e523.js" />
+        <link rel="stylesheet" href="http://localhost:8000/build/assets/app.badde8dd.css" />
+        <script type="module" src="http://localhost:8000/build/assets/app.d426e523.js"></script>
+
     </head>
     <body class="font-sans antialiased">
         <div class="min-h-screen bg-gray-100">
-            @include('layouts.navigation')
+            @include('admin.layouts.navigation')
 
             <!-- Page Heading -->
             <header class="bg-white shadow">

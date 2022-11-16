@@ -1,8 +1,7 @@
-<x-app-layout>
+<x-admin-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            <?php //dd(Auth ) ?>
-            {{ __('Welcome,') }} {{ Auth::user()->name }}
+            {{ __('Welcome') }} {{ Auth::guard('admin')->user()->name }} - ({{ Auth::guard('admin')->user()->email }})
         </h2>
     </x-slot>
 
@@ -15,4 +14,4 @@
             </div>
         </div>
     </div>
-</x-app-layout>
+</x-admin-layout>

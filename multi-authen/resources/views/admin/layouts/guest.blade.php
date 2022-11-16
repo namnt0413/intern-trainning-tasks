@@ -15,6 +15,12 @@
 
         <!-- Scripts -->
         <script src="{{ asset('js/app.js') }}" defer></script>
+
+         <!-- Scripts -->
+         <link rel="preload" as="style" href="http://localhost:8000/build/assets/app.badde8dd.css" />
+         <link rel="modulepreload" href="http://localhost:8000/build/assets/app.d426e523.js" />
+         <link rel="stylesheet" href="http://localhost:8000/build/assets/app.badde8dd.css" />
+         <script type="module" src="http://localhost:8000/build/assets/app.d426e523.js"></script>
     </head>
     <body>
         <div class="font-sans text-gray-900 antialiased">

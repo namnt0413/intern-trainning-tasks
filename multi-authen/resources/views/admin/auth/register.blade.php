@@ -1,4 +1,4 @@
-<x-guest-layout>
+<x-admin-guest-layout>
     <x-auth-card>
         <x-slot name="logo">
             <a href="/">
@@ -9,7 +9,9 @@
         <!-- Validation Errors -->
         <x-auth-validation-errors class="mb-4" :errors="$errors" />
 
-        <form method="POST" action="{{ route('register') }}">
+        <h2 class="text-4xl font-bold text-center">Admin Register</h2>
+
+        <form method="POST" action="{{ route('admin.register') }}">
             @csrf
 
             <!-- Name -->
@@ -46,7 +48,7 @@
             </div>
 
             <div class="flex items-center justify-end mt-4">
-                <a class="underline text-sm text-gray-600 hover:text-gray-900" href="{{ route('login') }}">
+                <a class="underline text-sm text-gray-600 hover:text-gray-900" href="{{ route('admin.login') }}">
                     {{ __('Already registered?') }}
                 </a>
 
@@ -56,4 +58,4 @@
             </div>
         </form>
     </x-auth-card>
-</x-guest-layout>
+</x-admin-guest-layout>
